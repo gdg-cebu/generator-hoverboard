@@ -1,3 +1,7 @@
+importScripts('/offline-google-analytics/offline-google-analytics-import.js');
+goog.offlineGoogleAnalytics.initialize();
+
+
 const cacheName = '<%= name %>-v1';
 const pathsToCache = [
   '/',
@@ -8,6 +12,7 @@ const pathsToCache = [
   '/static/stylesheets/main.css',
   '/static/javascripts/main.js',
   '/static/javascripts/sw-register.js',
+  '/offline-google-analytics/offline-google-analytics-import.js',
   '/static/images/logo.png',
   '/static/images/gdg-logo.png',
   '/static/fonts/droid-sans/bold.ttf',

@@ -71,7 +71,8 @@ module.exports = class extends Generator {
       'nodemon',
       'nunjucks',
       'serve-favicon',
-      'winston'
+      'winston',
+      'sw-offline-google-analytics'
     ]);
   }
 

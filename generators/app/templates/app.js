@@ -17,6 +17,8 @@ app.use(favicon(path.join(__dirname, 'static', 'images', 'favicon.ico')));
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use('/sw.js', express.static(path.join(__dirname, 'static', 'javascripts', 'sw.js')));
+app.use('/offline-google-analytics',  express.static(path.join(
+  __dirname, 'node_modules', 'sw-offline-google-analytics', 'build')));
 
 
 app.get('/', (req, res) => {
