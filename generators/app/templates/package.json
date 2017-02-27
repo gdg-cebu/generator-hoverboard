@@ -7,10 +7,5 @@
     "start": "./node_modules/.bin/nodemon bin/www"
   },
   "author": "<%= author %>",
-  "license": "MIT",
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  }
+  "license": "MIT"
 }

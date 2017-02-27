@@ -1,0 +1,7 @@
+[{
+  "name": "Speaker Name",
+  "position": "Position",
+  "company": "Company",
+  "bio": "Speaker bio",
+  "image": "/static/images/logo.png"
+}]

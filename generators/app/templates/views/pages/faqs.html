@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+
+{% block title %}FAQs | <%= title %>{% endblock %}
+
+
+{% block contents %}
+  <section id="faqs" class="page-section">
+    <div class="wrapper">
+      <h1 class="section-title">Frequently Asked Questions</h1>
+
+      <ol class="inner-wrapper faqs">
+        {% for faq in faqs %}
+          <li class="faq">
+            <h4>{{ faq.question }}</h4>
+            <p>{{ faq.answer|safe }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+{% endblock %}

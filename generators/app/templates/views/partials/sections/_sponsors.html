@@ -1,0 +1,20 @@
+<section id="sponsors" class="page-section">
+  <div class="wrapper">
+    <h1 class="section-title">Sponsors</h1>
+
+    <ol class="sponsors">
+      {% for group in sponsors %}
+        <li class="sponsor-group">
+          <h3 class="group-name">{{ group.name }}</h3>
+          <ul>
+            {% for sponsor in group.sponsors %}
+              <li class="sponsor">
+                <img class="sponsor-logo" src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

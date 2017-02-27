@@ -1,0 +1,27 @@
+<section id="schedule" class="page-section">
+  <div class="wrapper">
+    <h1 class="section-title">Schedule</h1>
+
+    <div class="schedule">
+      {% for session in sessions %}
+        <article class="session">
+          <header class="session-speaker" data-speaker="{{ session.speaker.name }}">
+            {% if session.speaker %}
+              <img class="session-speaker-avatar" src="{{ session.speaker.image }}" alt="{{ session.speaker.name }}">
+              <h1 class="session-speaker-name">{{ session.speaker.name }}</h1>
+            {% endif %}
+          </header>
+
+          <time class="session-time" datetime="now">{{ session.time }}</time>
+
+          <main class="session-details">
+            <h1 class="session-title">{{ session.title }}</h1>
+            {% if session.summary %}
+              <p class="session-summary">{{ session.summary|safe }}</p>
+            {% endif %}
+          </main>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

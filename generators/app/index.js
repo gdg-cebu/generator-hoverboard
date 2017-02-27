@@ -12,9 +12,14 @@ module.exports = class extends Generator {
     return async(_ => {
       this.answers = await(this.prompt([{
         type: 'input',
+        name: 'title',
+        message: 'Event title',
+        default: this.appname
+      }, {
+        type: 'input',
         name: 'name',
         message: 'Project name',
-        default: this.appname
+        default: this.appname.replace(/ /g, '-')
       }, {
         type: 'input',
         name: 'description',
@@ -23,7 +28,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'author',
         message: 'Project author',
-        store: true
+        default: 'Google Developers Group (GDG) Cebu'
       }]));
     })();
   }
@@ -33,16 +38,24 @@ module.exports = class extends Generator {
     return async(_ => {
       const templates = await(this._getTemplatePaths(this.sourceRoot()));
       const offset = this.sourceRoot().length + 1;
+      const blacklist = ['static/fonts', 'static/images'];
 
       templates.forEach(template => {
         template = template.slice(offset);
         const destination = template.replace(/^_/, '.');
 
-        this.fs.copyTpl(
-          this.templatePath(template),
-          this.destinationPath(destination),
-          this.answers
-        );
+        if (blacklist.find(item => template.indexOf(item) === 0)) {
+          this.fs.copy(
+            this.templatePath(template),
+            this.destinationPath(destination)
+          );
+        } else {
+          this.fs.copyTpl(
+            this.templatePath(template),
+            this.destinationPath(destination),
+            this.answers
+          );
+        }
       });
     })();
   }

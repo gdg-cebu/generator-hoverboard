@@ -1,0 +1,9 @@
+[{
+  "name": "Sponsor Group Name",
+  "sponsors": [
+    {
+      "name": "Sponsor Name",
+      "image": "/static/images/logo.png"
+    }
+  ]
+}]

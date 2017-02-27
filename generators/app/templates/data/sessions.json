@@ -1,0 +1,9 @@
+[{
+  "title": "Session Title",
+  "summary": "Session summary",
+  "time": "00:00",
+  "speaker": {
+    "name": "Speaker Name",
+    "image": "/static/images/logo.png"
+  }
+}]
