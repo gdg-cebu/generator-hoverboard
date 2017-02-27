@@ -1,0 +1,16 @@
+{
+  "name": "generator-hoverboard",
+  "description": "Yeoman generator for GDG Cebu event websites.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "generators"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.0"
+  }
+}
