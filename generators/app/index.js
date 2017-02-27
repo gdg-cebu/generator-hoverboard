@@ -61,6 +61,21 @@ module.exports = class extends Generator {
   }
 
 
+  install() {
+    this.yarnInstall([
+      'consolidate',
+      'express',
+      'fs-promise',
+      'morgan',
+      'nconf',
+      'nodemon',
+      'nunjucks',
+      'serve-favicon',
+      'winston'
+    ]);
+  }
+
+
   _getTemplatePaths(base) {
     return async(_ => {
       const paths = [];
