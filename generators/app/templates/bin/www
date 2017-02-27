@@ -1,0 +1,8 @@
+#!/usr/bin/env node --harmony
+const winston = require('winston');
+const config = require('../config');
+const app = require('../app');
+
+
+app.listen(config.get('PORT'),
+  _ => winston.info(`Server now running at port ${config.get('PORT')}`));

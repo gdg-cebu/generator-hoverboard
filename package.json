@@ -11,6 +11,9 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "async": "^2.1.5",
+    "asyncawait": "^1.0.6",
+    "fs-promise": "^2.0.0",
     "yeoman-generator": "^1.1.0"
   }
 }
