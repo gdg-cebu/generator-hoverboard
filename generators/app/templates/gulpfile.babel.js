@@ -11,7 +11,7 @@ const paths = {
   ],
   stylesheets: [
     'static/stylesheets/**/*.css',
-    '!static/javascripts/**/*.min.css'
+    '!static/stylesheets/**/*.min.css'
   ]
 };
 const buildDirectory = 'static';
