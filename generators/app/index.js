@@ -74,6 +74,16 @@ module.exports = class extends Generator {
       'winston',
       'sw-offline-google-analytics'
     ]);
+
+    this.yarnInstall([
+      'babel-core',
+      'babel-preset-es2015',
+      'gulp',
+      'gulp-autoprefixer',
+      'gulp-clean-css',
+      'gulp-rename',
+      'gulp-uglify'
+    ], { dev: true });
   }
 
 
