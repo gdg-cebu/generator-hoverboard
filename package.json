@@ -1,7 +1,7 @@
 {
   "name": "generator-hoverboard",
   "description": "Yeoman generator for GDG Cebu event websites.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "index.js",
   "files": [
     "generators"
