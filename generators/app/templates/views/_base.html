@@ -20,6 +20,8 @@
 
     <script src="/static/javascripts/main.min.js"></script>
     <script src="/static/javascripts/sw-register.min.js"></script>
-    {% include 'partials/_analytics.html' %}
+    {% if analytics %}
+      {% include 'partials/_analytics.html' %}
+    {% endif %}
   </body>
 </html>

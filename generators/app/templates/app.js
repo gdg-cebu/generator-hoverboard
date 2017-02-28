@@ -32,7 +32,8 @@ app.get('/', (req, res) => {
       speakers: data[0].sort(_ => Math.random() - 0.5),
       sessions: data[1],
       sponsors: data[2],
-      secrets: config.get('SECRETS')
+      secrets: config.get('SECRETS'),
+      analytics: req.hostname !== 'localhost'
     };
     res.render('pages/index.html', context);
   });
@@ -43,7 +44,8 @@ app.get('/faqs', (req, res) => {
   read(__dirname, 'data', 'faqs.json').then(faqs => {
     const context = {
       faqs,
-      secrets: config.get('SECRETS')
+      secrets: config.get('SECRETS'),
+      analytics: req.hostname !== 'localhost'
     };
     res.render('pages/faqs.html', context);
   });
@@ -52,7 +54,8 @@ app.get('/faqs', (req, res) => {
 
 app.get('/coc', (req, res) => {
   const context = {
-    secrets: config.get('SECRETS')
+    secrets: config.get('SECRETS'),
+    analytics: req.hostname !== 'localhost'
   };
   res.render('pages/coc.html', context);
 });
