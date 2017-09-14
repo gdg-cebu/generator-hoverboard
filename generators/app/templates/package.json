@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon bin/www"
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www"
   },
   "author": "<%= author %>",
   "license": "MIT",

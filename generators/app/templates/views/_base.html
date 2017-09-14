@@ -1,27 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<%= description %>">
-    <meta name="theme-color" content="#c0c6e4">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#c0c6e4">
 
-    <title>{% block title %}<%= title %>{% endblock %}</title>
+        <title>{% block title %}<%= title %>{% endblock %}</title>
 
-    <link rel="manifest" href="/static/manifest.json">
-    <link rel="stylesheet" href="/static/stylesheets/fonts.min.css">
-    <link rel="stylesheet" href="/static/stylesheets/main.min.css">
-  </head>
+        <link rel="manifest" href="static/manifest.json">
+        <link rel="stylesheet" href="static/stylesheets/fonts.min.css">
+        <link rel="stylesheet" href="static/stylesheets/main.min.css">
+    </head>
 
-  <body>
-    {% include 'partials/_header.html' %}
-    {% block contents %}{% endblock %}
-    {% include 'partials/_footer.html' %}
+    <body>
+        {% if analytics %}
+            {% include 'partials/_analytics.html' %}
+        {% endif %}
 
-    <script src="/static/javascripts/main.min.js"></script>
-    <script src="/static/javascripts/sw-register.min.js"></script>
-    {% if analytics %}
-      {% include 'partials/_analytics.html' %}
-    {% endif %}
-  </body>
+        {% include 'partials/_header.html' %}
+        {% block contents %}{% endblock %}
+        {% include 'partials/_footer.html' %}
+
+        <script src="static/javascripts/main.min.js"></script>
+        <script src="static/javascripts/sw-register.min.js"></script>
+    </body>
 </html>
